@@ -10,6 +10,7 @@ import myBank.dao.loginDao;
 import myBank.model.UserEntity;
 import myBank.view.customerService.customerServiceFrame;
 import myBank.view.login.loginFrame;
+import myBank.view.manager.ManagerFrame;
 import myBank.view.teller.tellerFrame;
 
 /**
@@ -22,38 +23,37 @@ public class LoginController {
 
     public void login(loginFrame view) {
         String idUser = view.getIdUser().getText();
-        String pass = String.valueOf(view.getPassword().getText());       
+        String pass = String.valueOf(view.getPassword().getText());
         if (!idUser.equals("") || !pass.equals("")) {
             if (idUser.equals("")) {
                 view.setMessageValidasi("Isi ID user", true);
             } else if (pass.equals("")) {
                 view.setMessageValidasi("Isi Password user", true);
-            } else {                
+            } else {
                 if (dao.cekLogin(idUser, pass) == true) {
-                    UserEntity listUser = dao.loadUser();                    
-                    switch(listUser.getjabatan()){
+                    UserEntity user = dao.loadUser();
+                    switch (user.getjabatan()) {
                         case "TELLER":
-                            tellerFrame teller = new tellerFrame(listUser);                            
-                            teller.setVisible(true);
+                            new tellerFrame(user).setVisible(true);                            
                             view.dispose();
                             break;
-                        case "HRD" :
+                        case "MANAGER":
+                            new ManagerFrame(user).setVisible(true);
                             break;
-                        case "MANAGER" :
-                            break;
-                        case "CS" :
+                        case "CS":
                             customerServiceFrame cs = new customerServiceFrame();
                             cs.setVisible(true);
                             view.dispose();
                             break;
-                           default: JOptionPane.showMessageDialog(null, "terjadi kesalahan");
-                }
-                            
+                        default:
+                            JOptionPane.showMessageDialog(null, "terjadi kesalahan");
+                    }
+
                 } else {
                     view.setMessageValidasi("Gagal login. Cek ID atau Password", true);
                 }
             }
-            
+
         }
     }
 }
