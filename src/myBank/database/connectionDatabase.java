@@ -17,7 +17,7 @@ import myBank.view.message.shortMessage;
 public class connectionDatabase {
 
     private Connection conn;
-    final private String db = "dbmybank";
+    final private String db = "bank";
     final private String user = "root";
     final private String pass = "";
     final private String url = "jdbc:mysql://localhost:3306/" + db;
