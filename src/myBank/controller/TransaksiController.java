@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import myBank.dao.transaksiDao;
 import myBank.database.connectionDatabase;
 import myBank.model.TabunganEntity;
+import myBank.view.teller.debet.DebetPanel;
 import myBank.view.teller.kredit.kreditPanel;
 
 /**
@@ -22,6 +23,17 @@ public class TransaksiController {
 
     public void getDataKredit(kreditPanel view) {
         String noRek = view.getNorek().getText();
+       
+        if (noRek.equals("")) {
+            JOptionPane.showMessageDialog(null, "Tentukan nomor rekening");
+        } else {
+            TabunganEntity  tabungan = transaksiDao.selectKredit(noRek);            
+            view.setNamaNasabah(tabungan.getNama());
+            view.setSaldoNasabah(String.valueOf(tabungan.getSaldo()));
+        }
+    }
+        public void getDataDebet(DebetPanel view) {
+        String noRek = view.getNoRek().getText();
        
         if (noRek.equals("")) {
             JOptionPane.showMessageDialog(null, "Tentukan nomor rekening");

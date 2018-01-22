@@ -68,7 +68,6 @@ public class kreditPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         norekText = new javax.swing.JTextField();
@@ -85,9 +84,6 @@ public class kreditPanel extends javax.swing.JPanel {
         setLayout(new java.awt.BorderLayout());
 
         jPanel1.setOpaque(false);
-
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("jLabel7");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -129,8 +125,7 @@ public class kreditPanel extends javax.swing.JPanel {
                         .addComponent(norekText, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7))
+                    .addComponent(jLabel6))
                 .addGap(18, 18, 18))
         );
         jPanel1Layout.setVerticalGroup(
@@ -142,9 +137,7 @@ public class kreditPanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(norekText, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         add(jPanel1, java.awt.BorderLayout.PAGE_START);
@@ -157,7 +150,6 @@ public class kreditPanel extends javax.swing.JPanel {
 
         namaNasabahLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         namaNasabahLabel.setForeground(new java.awt.Color(255, 255, 255));
-        namaNasabahLabel.setText("jLabel4");
         namaNasabahLabel.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(255, 255, 255)));
         namaNasabahLabel.setPreferredSize(new java.awt.Dimension(50, 40));
 
@@ -200,8 +192,6 @@ public class kreditPanel extends javax.swing.JPanel {
                 jLabel1MouseReleased(evt);
             }
         });
-
-        nominalTextField.setText("jTextField1");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -289,7 +279,6 @@ public class kreditPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel namaNasabahLabel;

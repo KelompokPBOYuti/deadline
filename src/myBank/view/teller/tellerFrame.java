@@ -7,7 +7,7 @@ package myBank.view.teller;
 
 import myBank.view.teller.laporan.laporanTransaksiPanel;
 import myBank.view.teller.transfer.transferPanel;
-import myBank.view.teller.debet.debetPanel;
+import myBank.view.teller.debet.DebetPanel;
 import myBank.view.teller.kredit.kreditPanel;
 import java.awt.Color;
 import java.awt.HeadlessException;
@@ -24,7 +24,7 @@ public class tellerFrame extends javax.swing.JFrame {
 
     buttonStyle style = new buttonStyle();
     kreditPanel kredit = new kreditPanel();
-    debetPanel debet = new debetPanel();
+    DebetPanel debet = new DebetPanel();
     transferPanel transfer = new transferPanel();
     laporanTransaksiPanel laporan = new laporanTransaksiPanel();
     Border borderAktif = javax.swing.BorderFactory.createMatteBorder(0, 5, 0, 0, new java.awt.Color(255, 255, 255));
